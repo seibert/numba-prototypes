@@ -39,7 +39,7 @@ jobs:
 
       - name: Render notebooks
         run: |
-          source $CONDA/envs/activate
+          source $CONDA/bin/activate
           conda activate sealir_tutorial
           cd sealir-tutorials
           make pages
