@@ -35,16 +35,16 @@ jobs:
         with:
           auto-activate-base: false
           activate-environment: sealir_tutorial
-          environment-file: $GITHUB_WORKSPACE/numba-prototypes/sealir-tutorials/conda_environment.yml
+          environment-file: sealir-tutorials/conda_environment.yml
 
       - name: Render notebooks
         run: |
-          cd $GITHUB_WORKSPACE/numba-prototypes/sealir-tutorials
+          cd sealir-tutorials
           make pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: $GITHUB_WORKSPACE/numba-prototypes/sealir-tutorials/pages
+          path: sealir-tutorials/pages
 
   # Deployment job
   deploy:
