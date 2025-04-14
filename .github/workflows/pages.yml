@@ -39,6 +39,7 @@ jobs:
 
       - name: Render notebooks
         run: |
+          conda activate sealir_tutorial
           cd sealir-tutorials
           make pages
       - name: Upload artifact
